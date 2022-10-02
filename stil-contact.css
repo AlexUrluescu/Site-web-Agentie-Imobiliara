@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    background-color: #00203fff;
+    height: 70px;
+    border-bottom: 3px solid aliceblue;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    transition: all .3s;
+    z-index: 1100;
+}
+
+header svg{
+    color: white;
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 18px;
+    left: 20px;
+}
+
+header svg:nth-child(1){
+    display: flex;
+}
+
+header svg:nth-child(2){
+    display: none;
+}
+
+.contenedor-menu{
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    height: 0;
+
+    position: fixed;
+    top: 70px;
+    width: 100%;
+
+    transition: all .3s;
+    z-index: 1000;
+    
+}
+
+.menu{
+    /* background-color: #00203fff; */
+    background-color: gainsboro;
+    width: 300px;
+    list-style: none;
+    /* padding: 0px 20px; */
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   
+}
+
+
+.item-menu{
+    padding: 20px;
+    color:#00203fff;
+    font-weight: 600;
+}
+
+#locatie{
+
+    background-color: gold;
+}
+
+#link1{
+    border-top: 1px solid #00203fff;
+    border-bottom: 1px solid #00203fff;
+}
+
+#link2{
+    border-bottom: 1px solid #00203fff;
+}
+
+/* ------------------------------- */
+
+
+/* --------------- TRANSFORRMARE MENU PENTRU LAPTOP ---------------- */
+
+@media screen and (min-width:760px) {
+
+    header{
+        display: none;
+    }
+
+    .contenedor-menu{
+        background-color: aliceblue;
+        color: white;
+        height: 80px;
+        width: 100%;
+        z-index: 1000;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+    
+        transition: all .3s;
+        
+    }
+
+    .menu{
+        background-color: #00203fff;
+        width: 100%;
+        height: 80px;
+        list-style: none;
+        border-bottom: 2px solid aliceblue;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+       
+    }
+
+    .menu a{
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        font-size: 17px
+    }
+
+    .item-menu{
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #locatie{
+        background-color: gold;
+        color: #00203fff;
+        height: 80px;
+        text-decoration: none;
+    }
+
+    #link1{
+        border: none;
+    }
+    
+    #link2{
+        border: none;
+    }
+
+}
+
+
+/* -------------------------- FINAL --------------------------- */
+
+
+/* ------------------------ FATADA ----------------------------- */
+
+.contenedor1{
+    /* background-color: red; */
+    margin-top: 80px;
+}
+
+.contenedor-all1{
+    /* background-color: blue; */
+    padding: 80px 20px;
+}
+
+.contenedor-adaptare1{
+    /* background-color: beige; */
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+}
+
+.contenedor-titlu1{
+    /* background-color: green; */
+    padding: 50px 20px;
+    width: 50%;
+}
+
+.contenedor-titlu1 h1{ 
+    font-size: 60px;
+    color: #00203fff;
+}
+
+.contenedor-titlu1 h2{
+    color: rgb(229, 195, 2);
+    font-size: 40px;
+    margin-top: -10px;
+
+}
+
+.contenedor-titlu1 p{
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+
+.contenedor-titlu1 input{
+    margin-top: 100px;
+
+    padding: 13px 23px;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: gold;
+
+    transition: all .3s;
+}
+
+.contenedor-titlu1 input:hover{
+    background-color: #00203fff;
+    color: white;
+}
+
+
+.contenedor-icon{
+    /* background-color: pink; */
+    padding: 0 20px;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .3s;
+}
+
+.contenedor-icon img{
+    width: 500px;
+    height: 500px;
+
+    animation: animatie 4s ease infinite;
+}
+
+@keyframes animatie {
+    0%{
+        transform: translateY(20px);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+
+
+
+/* ------- MEDIA QUERIES FATADA ---------- */
+
+@media screen and (max-width:1100px) {
+    .contenedor-icon{
+        width: 550px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .contenedor-icon{
+        width: 480px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .contenedor-adaptare1{
+        /* background-color: red;  */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-icon{
+        height: 500px;
+        /* text-align: center;
+        margin: auto; */
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contenedor-icon img{
+        padding: 20px;
+    }
+
+    .contenedor-titlu1{
+        text-align: center;
+        width: 100%;
+    }
+
+    section{
+        /* background-color: red; */
+        margin-top: 0px;
+    }
+
+    .contenedor-btn{
+    
+        position: absolute;
+        bottom: 40px;
+        left: 0px;
+
+    }
+}
+
+@media screen and (max-width:760px) {
+    .contenedor1{
+        /* background-color: red; */
+        margin-top: -30px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .contenedor-icon{
+        /* background-color: red; */
+        padding: 0;
+        margin: auto;
+        width: 100%;
+
+    }
+
+    .contenedor-icon img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .contenedor-all1{
+        /* background-color: blue; */
+        padding: 40px 0px;
+    }
+
+    .contenedor-titlu1{
+        /* background-color: pink; */
+       text-align: center;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .contenedor-icon img{
+        width: 350px;
+        height: 400px;
+    }
+
+    .contenedor-icon{
+        height: 400px;
+
+    }
+
+    .contenedor1{
+        margin-bottom: 50px;
+    }
+
+    .contenedor-titlu1 h2{
+        font-size: 32px;
+        margin-top: 0px;
+    
+    }
+
+}
+
+/* ------ FINAL MEDIA QUERIES FATADA ------ */
+
+/* ------------------- FINAL FATADA ----------------------------- */
+
+/* ---------------- CONTINUT 1 ------------------------------ */
+
+.contenedor2{
+    background-color: #00203fff;
+    margin-bottom: 3px;
+}
+
+.contenedor-all2{
+    /* background-color: orange; */
+    padding: 70px 20px;
+}
+
+.contenedor-adaptare2{
+    /* background-color: beige; */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor-adaptare2 h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.socialMedia{
+    /* background-color: red; */
+    padding: 40px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+.socialMedia-casa{
+    /* background-color: greenyellow; */
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.socialMedia-icon{
+    /* background-color: blue; */
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMedia-icon img{
+    width: 150px;
+    height: 150px;
+}
+
+.socialMedia-link{
+    /* background-color: pink; */
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .3s;
+}
+
+.socialMedia-link:hover{
+    font-size: 22px;
+}
+
+.casuta-telefon2{
+    /* background-color: red; */
+    margin: 50px auto;
+    max-width: 500px;
+    color: white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.casuta-telefon2 img{
+    width: 130px;
+    height: 150px;
+}
+
+.casuta-telefon2 h2{
+    margin-left: 50px;
+}
+
+
+/* -------- media queries ------- */
+
+@media screen and (max-width:530px) {
+    .casuta-telefon2 h2{
+        font-size: 20px;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .casuta-telefon2 h2{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .casuta-telefon2 img{
+        width: 100px;
+        height: 120px;
+    }
+}
+
+/* ----- final media queries ------ */
+
+/* ----------------- FINAL CONTINUT 1 ---------------------- */
+
+/* --------------------- CONTINUT 2 --------------------------- */
+
+.contenedor4{
+    margin-top: 80px;
+    background-color: #00203fff;
+}
+
+.contenedor-all4{
+    background-color: #00203fff;
+    padding: 70px 20px;
+}
+
+.contenedor-adaptare4{
+    /* background-color: beige; */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor-adaptare4 h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+    /* background-color: red; */
+}
+
+.contenedor-tot2{
+    /* background-color: red; */
+
+    display: flex;
+}
+
+.contenedor-tot2-social{
+    /* background-color: rgb(62, 189, 189); */
+    width: 50%;
+    border-right: 1px solid aliceblue;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* .casuta-social{
+    background-color: red;
+} */
+
+.titlu-social{
+    /* background-color: pink; */
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    color: white;
+}
+
+/* .continut-social{
+    background-color: green;
+} */
+
+.continut-social ul{
+    list-style: none;
+    /* background-color: antiquewhite; */
+}
+
+.continut-social ul li{
+    /* background-color: black; */
+    margin:15px;
+    cursor: pointer;
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.69);
+
+    display: flex;
+    align-items: center;
+
+    transition: all .3s;
+}
+
+.continut-social ul li svg{
+    margin-right: 15px;
+}
+
+.contenedor-tot2-telefon{
+    /* background-color: aqua; */
+    width: 50%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* .casuta-telefon{
+    background-color: red;
+} */
+
+.titlu-telefon{
+    /* background-color: pink; */
+    padding: 20px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+
+}
+
+/* .continut-telefon{
+    background-color: white;
+} */
+
+.continut-telefon ul{
+    /* background-color: green; */
+        list-style: none;
+}
+
+.continut-telefon ul li{
+    /* background-color: black; */
+    margin:15px;
+    font-size: 19px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.69);
+    
+    display: flex;
+    align-items: center;
+
+    transition: all .3s;
+}
+
+.continut-telefon ul li svg{
+    margin-right: 15px;
+}
+
+.contenedor-tot2 ul li:hover{
+    color: aliceblue;
+}
+
+
+/* ----- media queries ----- */
+
+@media screen and (max-width:570px) {
+
+    .contenedor-tot2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-tot2-social{
+        /* background-color: rgb(62, 189, 189); */
+        width: 100%;
+        border: none;
+    }
+
+    .contenedor-tot2-telefon{
+        /* background-color: aqua; */
+        width: 100%;
+    }
+
+    .casuta-telefon{
+        /* background-color: red; */
+        width: 207px;
+    }
+
+    .contenedor4{
+        margin-top: 40px;
+        background-color: #00203fff;
+    }
+}
+
+/* ----- final media queries ------- */
+
+/* --------------------- FINAL CONTINUT 2 ------------------------ */
+
+/* ----------------------- FOOTER -------------------------------- */
+
+footer{
+    background-color: #00203fff;
+    color: rgba(240, 248, 255, 0.733);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.751);
+}
+
+/* --------------------------------------------------------------- */

@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    background-color: #00203fff;
+    height: 70px;
+    border-bottom: 3px solid aliceblue;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    transition: all .3s;
+    z-index: 1100;
+}
+
+header svg{
+    color: white;
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 18px;
+    left: 20px;
+}
+
+header svg:nth-child(1){
+    display: flex;
+}
+
+header svg:nth-child(2){
+    display: none;
+}
+
+.contenedor-menu{
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    height: 0;
+
+    position: fixed;
+    top: 70px;
+    width: 100%;
+
+    transition: all .3s;
+    z-index: 1000;
+    
+}
+
+.menu{
+    /* background-color: #00203fff; */
+    background-color: gainsboro;
+    width: 300px;
+    list-style: none;
+    /* padding: 0px 20px; */
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   
+}
+
+
+.item-menu{
+    padding: 20px;
+    color: #00203fff;
+    font-weight: 600;
+}
+
+#locatie{
+    background-color: gold;
+    color: #00203fff;
+}
+
+#link1{
+    border-top: 1px solid #00203fff;
+    border-bottom: 1px solid #00203fff;
+}
+
+#link2{
+    border-bottom: 1px solid #00203fff;
+}
+
+/* ------------------------------- */
+
+
+/* --------------- TRANSFORRMARE MENU PENTRU LAPTOP ---------------- */
+
+@media screen and (min-width:760px) {
+
+    header{
+        display: none;
+    }
+
+    .contenedor-menu{
+        background-color: aliceblue;
+        color: white;
+        height: 80px;
+        width: 100%;
+        z-index: 1000;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+    
+        transition: all .3s;
+        
+    }
+
+    .menu{
+        background-color: #00203fff;
+        width: 100%;
+        height: 80px;
+        list-style: none;
+        border-bottom: 2px solid aliceblue;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+       
+    }
+
+    .menu a{
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 17px
+    }
+
+    .item-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+    }
+
+    #locatie{
+        background-color: gold;
+        color: #00203fff;
+        height: 80px;
+    }
+
+    #link1{
+        border: none;
+    }
+    
+    #link2{
+        border: none;
+    }
+
+}
+
+
+/* -------------------------- FINAL --------------------------- */
+
+
+/* ------------------------ FATADA ----------------------------- */
+
+section{
+    /* background-color: red; */
+    margin-top: 80px;
+}
+
+.contenedor-all1{
+    /* background-color: blue; */
+    padding: 80px 20px;
+}
+
+.contenedor-adaptare1{
+    /* background-color: beige; */
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+}
+
+.contenedor-titlu1{
+    /* background-color: green; */
+    padding: 50px 20px;
+    width: 40%;
+}
+
+.contenedor-titlu1 h1{ 
+    font-size: 60px;
+    color: #00203fff;
+}
+
+.contenedor-titlu1 p{
+    font-size: 20px;
+    margin-top: 70px;
+}
+
+.contenedor-titlu1 input{
+    margin-top: 130px;
+    padding: 13px 23px;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: gold;
+
+    transition: all .3s;
+}
+
+.contenedor-titlu1 input:hover{
+    background-color: #00203fff;
+    color: white;
+}
+
+
+.contenedor-poza1{
+    /* background-color: pink; */
+    padding: 20px;
+    width: 60%;
+
+    position: relative;
+    background-size: cover;
+
+    transition: all .3s;
+}
+
+.contenedor-btn{
+    /* background-color: red; */
+    width: 100%;
+    
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-btn ul{
+    /* background-color: blue; */
+    border-top: 2px solid rgba(255, 255, 255, 0.848);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.848);
+    padding: 5px;
+    width: 300px;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor-btn ul li{
+    /* background-color: aqua; */
+    width: 40px;
+    padding: 10px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.752);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn1{
+    color: white;
+    border: 1px solid white;
+}
+
+.contenedor-poza1 img{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-size: cover;
+    /* opacity: 0; */
+}
+
+
+/* ------- MEDIA QUERIES FATADA ---------- */
+
+@media screen and (max-width:1100px) {
+    .contenedor-poza1{
+        width: 550px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .contenedor-poza1{
+        width: 480px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .contenedor-adaptare1{
+        /* background-color: red;  */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-poza1{
+        height: 500px;
+        /* text-align: center;
+        margin: auto; */
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contenedor-poza1 img{
+        padding: 20px;
+    }
+
+    .contenedor-titlu1{
+        text-align: center;
+        width: 100%;
+    }
+
+    section{
+        /* background-color: red; */
+        margin-top: 0px;
+    }
+
+    .contenedor-btn{
+    
+        position: absolute;
+        bottom: 40px;
+        left: 0px;
+
+    }
+}
+
+@media screen and (max-width:550px) {
+    .contenedor-poza1{
+        height: 400px;
+
+    }
+
+    .contenedor-all1{
+        /* background-color: blue; */
+        padding: 40px 20px;
+    }
+
+}
+
+/* ------ FINAL MEDIA QUERIES FATADA ------ */
+
+/* ------------------- FINAL FATADA ----------------------------- */
+
+
+/* -------------------- CONTINUT 1 OPINII ------------------------------- */
+
+.contenedor2{
+    /* background-color: blue; */
+    margin-top: 15px;
+}
+
+.contenedor-all2{
+    background-color: #00203fff;
+    padding: 80px 20px;
+}
+
+.contenedor-adaptare2{
+    /* background-color: beige; */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor-adaptare2 h1{
+    /* background-color: aqua; */
+    padding: 20px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenedor-casute{
+    /* background-color: green; */
+    padding: 30px 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+.casuta{
+    /* background-color: pink; */
+    background-color: aliceblue;
+    width: 270px;
+}
+
+.casuta-poza{
+    /* background-color: red; */
+    padding: 20px;
+}
+
+.loc-poza{
+    /* background-color: beige; */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.loc-poza img{
+    width: 100%;
+    height: 100%;
+}
+
+.casuta-continut{
+    /* background-color: gold; */
+    padding: 20px;
+}
+
+.casuta-continut h3{
+    margin-top: 25px;
+}
+
+.casuta-stele{
+    /* background-color: aquamarine; */
+    padding: 20px;
+}
+
+.casuta-stele svg{
+    width: 20px;
+    height: 20px;
+    color: gold;
+}
+
+/* -------------------- FINAL OPINII -------------------------------- */
+
+/* -------------------- CONTINUT 2 --------------------------------- */
+
+.contenedor3{
+    /* background-color: blue; */
+    margin-top: 0;
+}
+
+.contenedor-all3{
+    background-color:aliceblue;
+    padding: 100px 20px;
+}
+
+.contenedor-adaptare3{
+    /* background-color: beige; */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor-adaptare3 h1{
+    font-size: 50px;
+    color: #00203fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contenedor-tot{
+    /* background-color: blue; */
+    margin-top: 30px;
+
+    display: flex;
+}
+
+.contenedor-planeta{
+    /* background-color: pink; */
+    width: 35%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenedor-planeta img{
+    width: 100%;
+    height: 100%;
+
+    transition: all .3s;
+}
+
+.contenedor3-continut{
+    /* background-color: gold; */
+    padding: 20px 40px;
+    width: 65%;
+
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.casuta-continut2{
+    /* background-color: aqua; */
+    border: 3px solid #00203fff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+
+}
+
+.casuta-continut2-icon{
+    /* background-color: antiquewhite; */
+    width: 15%;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casuta-continut2-icon svg{
+    width: 40px;
+    height: 40px;
+    color: #00203fff;
+}
+
+.casuta-continut2-info{
+    /* background-color: plum; */
+    width: 85%;
+    padding: 20px;
+    color: white;
+    background-color: #00203fff;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------- media queries ------- */
+
+@media screen and (max-width:1000px) {
+    .contenedor-planeta img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:870px) {
+    .casuta-continut2-info p{
+        font-size: 14px;
+    }
+
+    .contenedor-planeta img{
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+@media screen and (max-width:760px) {
+    .contenedor-tot{
+        flex-direction: column;
+    }
+
+    .contenedor-planeta{
+        width: 100%;
+    
+    }
+
+    .contenedor3-continut{
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width:500px){
+    .casuta-continut2{
+        flex-direction: column;
+        width: 250px;
+    }
+
+    .casuta-continut2-icon{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .casuta-continut2-info{
+      width: 100%;
+      text-align: center;
+    }
+
+    .contenedor3-continut{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .contenedor-adaptare3 h1{
+        font-size: 35px;
+        color: #00203fff;
+        text-align: center;
+        padding: 15px;
+    }
+    
+
+}
+
+/* ---------------------- CONTINUT 3 ----------------------------- */
+
+
+.contenedor-all4{
+    background-color: #00203fff;
+    padding: 70px 20px;
+}
+
+.contenedor-adaptare4{
+    /* background-color: beige; */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor-adaptare4 h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+    /* background-color: red; */
+}
+
+.contenedor-tot2{
+    /* background-color: red; */
+
+    display: flex;
+}
+
+.contenedor-tot2-social{
+    /* background-color: rgb(62, 189, 189); */
+    width: 50%;
+    border-right: 1px solid aliceblue;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* .casuta-social{
+    background-color: red;
+} */
+
+.titlu-social{
+    /* background-color: pink; */
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    color: white;
+}
+
+/* .continut-social{
+    background-color: green;
+} */
+
+.continut-social ul{
+    list-style: none;
+    /* background-color: antiquewhite; */
+}
+
+.continut-social ul li{
+    /* background-color: black; */
+    margin:15px;
+    cursor: pointer;
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.69);
+
+    display: flex;
+    align-items: center;
+
+    transition: all .3s;
+}
+
+.continut-social ul li svg{
+    margin-right: 15px;
+}
+
+.contenedor-tot2-telefon{
+    /* background-color: aqua; */
+    width: 50%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* .casuta-telefon{
+    background-color: red;
+} */
+
+.titlu-telefon{
+    /* background-color: pink; */
+    padding: 20px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+
+}
+
+/* .continut-telefon{
+    background-color: white;
+} */
+
+.continut-telefon ul{
+    /* background-color: green; */
+        list-style: none;
+}
+
+.continut-telefon ul li{
+    /* background-color: black; */
+    margin:15px;
+    font-size: 19px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.69);
+    
+    display: flex;
+    align-items: center;
+
+    transition: all .3s;
+}
+
+.continut-telefon ul li svg{
+    margin-right: 15px;
+}
+
+.contenedor-tot2 ul li:hover{
+    color: aliceblue;
+}
+
+
+/* ----- media queries ----- */
+
+@media screen and (max-width:570px) {
+
+    .contenedor-tot2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-tot2-social{
+        /* background-color: rgb(62, 189, 189); */
+        width: 100%;
+        border: none;
+    }
+
+    .contenedor-tot2-telefon{
+        /* background-color: aqua; */
+        width: 100%;
+    }
+
+    .casuta-telefon{
+        /* background-color: red; */
+        width: 207px;
+    }
+}
+
+/* ----- final media queries ------- */
+
+/* --------------------- FINAL CONTINUT 3 -------------------------- */
+
+/* ----------------------- FOOTER -------------------------------- */
+
+footer{
+    background-color: #00203fff;
+    color: rgba(240, 248, 255, 0.733);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.751);
+}
+
+/* -------------- clase JS ---------- */
+
+.dispare_btn{
+    display: none;
+}
+
+.apare_btn_inchide{
+    display: block;
+}
